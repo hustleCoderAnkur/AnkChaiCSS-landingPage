@@ -1,0 +1,1625 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AnkChaiCSS — Utility-First CSS Framework</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&family=Fraunces:ital,wght@0,300;0,700;1,300&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body class="chai-bg-black"
+    style="background:#0a0906; color:#c8b896; font-family:'Syne',sans-serif; overflow-x:hidden;">
+
+    <nav
+        style="position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.1rem 3rem;background:rgba(10,9,6,0.85);backdrop-filter:blur(16px);border-bottom:1px solid rgba(200,134,60,0.18);">
+        <div
+            style="font-family:'Syne',sans-serif;font-weight:800;font-size:1.2rem;letter-spacing:-0.03em;color:#e8d5b0;">
+            <span style="color:#c8863c;">Ank</span>ChaiCSS
+        </div>
+        <ul style="display:flex;gap:2.2rem;list-style:none;">
+            <li><a href="#Docs"
+                    style="font-size:0.82rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:#7a6a50;text-decoration:none;transition:color 0.2s;"
+                    onmouseover="this.style.color='#e8b87a'" onmouseout="this.style.color='#7a6a50'">Docs</a></li>
+            <li><a href="#reference"
+                    style="font-size:0.82rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:#7a6a50;text-decoration:none;transition:color 0.2s;"
+                    onmouseover="this.style.color='#e8b87a'" onmouseout="this.style.color='#7a6a50'">Reference</a></li>
+        </ul>
+    </nav>
+
+
+    <section
+        class="chai-relative chai-overflow-hidden chai-flex chai-flex-col chai-items-center chai-justify-center chai-text-center"
+        style="min-height:100vh;padding:8rem 2rem 5rem;">
+
+        <div class="chai-absolute"></div>
+        <div class="chai-absolute"
+            style="top:-10%;left:50%;transform:translateX(-50%);width:700px;height:500px;background:radial-gradient(ellipse,rgba(200,134,60,0.12) 0%,transparent 70%);pointer-events:none;">
+        </div>
+
+        <p class="chai-font-mono chai-uppercase chai-tracking-widest"
+            style="font-size:0.7rem;color:#c8863c;margin-bottom:1.4rem;animation:fadeUp 0.7s 0.1s both;">Utility-First
+            CSS Framework</p>
+
+        <h1 class="chai-font-black chai-leading-none"
+            style="font-family:'Syne',sans-serif;font-size:clamp(3.5rem,10vw,8rem);letter-spacing:-0.04em;color:#f0e8d8;margin-bottom:1.6rem;animation:fadeUp 0.7s 0.2s both;">
+            Ank<span style="color:#c8863c;">Chai</span>CSS
+        </h1>
+
+        <p class="chai-leading-relaxed"
+            style="max-width:540px;font-size:1.05rem;color:#7a6a50;margin-bottom:2.5rem;animation:fadeUp 0.7s 0.35s both;">
+            Compose beautiful interfaces with simple, predictable utility classes.
+            No build step. No config. Just <code class="chai-font-mono" style="color:#c8863c;">chai-</code> prefix and
+            style.
+        </p>
+
+        <div class="chai-flex chai-flex-wrap chai-justify-center" style="gap:1rem;animation:fadeUp 0.7s 0.5s both;">
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+            <a href="#install" class="chai-font-bold chai-cursor-pointer"
+                style="background:#c8863c;color:#0a0906;padding:0.85rem 2.2rem;border-radius:8px;font-size:0.9rem;letter-spacing:0.04em;transition:background 0.2s,transform 0.15s;text-decoration:none;"
+                onmouseover="this.style.background='#e8b87a';this.style.transform='translateY(-2px)'"
+                onmouseout="this.style.background='#c8863c';this.style.transform='translateY(0)'">Try Now</a>
+            <a href="#reference" class="chai-font-semibold chai-cursor-pointer"
+                style="border:1px solid rgba(200,134,60,0.18);color:#c8b896;padding:0.85rem 2.2rem;border-radius:8px;font-size:0.9rem;transition:border-color 0.2s,color 0.2s;text-decoration:none;"
+                onmouseover="this.style.borderColor='#c8863c';this.style.color='#e8b87a'"
+                onmouseout="this.style.borderColor='rgba(200,134,60,0.18)';this.style.color='#c8b896'">Browse Classes
+                →</a>
+        </div>
+    </section>
+
+
+    <div class="chai-overflow-hidden"
+        style="background:rgba(200,134,60,0.06);border-top:1px solid rgba(200,134,60,0.18);border-bottom:1px solid rgba(200,134,60,0.18);padding:0.9rem 0;">
+        <div class="chai-flex" style="gap:0;white-space:nowrap;animation:ticker 28s linear infinite;">
+            <span class="chai-font-mono" style="font-size:0.78rem;color:#5a4a30;padding:0 1rem;"><span
+                    style="color:#c8863c;">.chai-flex</span> — display:flex &nbsp;•</span>
+            <span class="chai-font-mono" style="font-size:0.78rem;color:#5a4a30;padding:0 1rem;"><span
+                    style="color:#c8863c;">.chai-text-xl</span> — font-size:1.25rem &nbsp;•</span>
+            <span class="chai-font-mono" style="font-size:0.78rem;color:#5a4a30;padding:0 1rem;"><span
+                    style="color:#c8863c;">.chai-bg-teal</span> — background-color:#14b8a6 &nbsp;•</span>
+            <span class="chai-font-mono" style="font-size:0.78rem;color:#5a4a30;padding:0 1rem;"><span
+                    style="color:#c8863c;">.chai-rounded-full</span> — border-radius:9999px &nbsp;•</span>
+            <span class="chai-font-mono" style="font-size:0.78rem;color:#5a4a30;padding:0 1rem;"><span
+                    style="color:#c8863c;">.chai-shadow-lg</span> — big drop shadow &nbsp;•</span>
+            <span class="chai-font-mono" style="font-size:0.78rem;color:#5a4a30;padding:0 1rem;"><span
+                    style="color:#c8863c;">.chai-font-bold</span> — font-weight:700 &nbsp;•</span>
+            <span class="chai-font-mono" style="font-size:0.78rem;color:#5a4a30;padding:0 1rem;"><span
+                    style="color:#c8863c;">.chai-p-8</span> — padding:2rem &nbsp;•</span>
+            <span class="chai-font-mono" style="font-size:0.78rem;color:#5a4a30;padding:0 1rem;"><span
+                    style="color:#c8863c;">.chai-grid-cols-3</span> — 3 column grid &nbsp;•</span>
+            <span class="chai-font-mono" style="font-size:0.78rem;color:#5a4a30;padding:0 1rem;"><span
+                    style="color:#c8863c;">.chai-opacity-50</span> — opacity:0.5 &nbsp;•</span>
+            <span class="chai-font-mono" style="font-size:0.78rem;color:#5a4a30;padding:0 1rem;"><span
+                    style="color:#c8863c;">.chai-transition</span> — smooth transitions &nbsp;•</span>
+            <!-- duplicate for seamless loop -->
+            <span class="chai-font-mono" style="font-size:0.78rem;color:#5a4a30;padding:0 1rem;"><span
+                    style="color:#c8863c;">.chai-flex</span> — display:flex &nbsp;•</span>
+            <span class="chai-font-mono" style="font-size:0.78rem;color:#5a4a30;padding:0 1rem;"><span
+                    style="color:#c8863c;">.chai-text-xl</span> — font-size:1.25rem &nbsp;•</span>
+            <span class="chai-font-mono" style="font-size:0.78rem;color:#5a4a30;padding:0 1rem;"><span
+                    style="color:#c8863c;">.chai-bg-teal</span> — background-color:#14b8a6 &nbsp;•</span>
+            <span class="chai-font-mono" style="font-size:0.78rem;color:#5a4a30;padding:0 1rem;"><span
+                    style="color:#c8863c;">.chai-rounded-full</span> — border-radius:9999px &nbsp;•</span>
+            <span class="chai-font-mono" style="font-size:0.78rem;color:#5a4a30;padding:0 1rem;"><span
+                    style="color:#c8863c;">.chai-shadow-lg</span> — big drop shadow &nbsp;•</span>
+            <span class="chai-font-mono" style="font-size:0.78rem;color:#5a4a30;padding:0 1rem;"><span
+                    style="color:#c8863c;">.chai-font-bold</span> — font-weight:700 &nbsp;•</span>
+            <span class="chai-font-mono" style="font-size:0.78rem;color:#5a4a30;padding:0 1rem;"><span
+                    style="color:#c8863c;">.chai-p-8</span> — padding:2rem &nbsp;•</span>
+            <span class="chai-font-mono" style="font-size:0.78rem;color:#5a4a30;padding:0 1rem;"><span
+                    style="color:#c8863c;">.chai-grid-cols-3</span> — 3 column grid &nbsp;•</span>
+            <span class="chai-font-mono" style="font-size:0.78rem;color:#5a4a30;padding:0 1rem;"><span
+                    style="color:#c8863c;">.chai-opacity-50</span> — opacity:0.5 &nbsp;•</span>
+            <span class="chai-font-mono" style="font-size:0.78rem;color:#5a4a30;padding:0 1rem;"><span
+                    style="color:#c8863c;">.chai-transition</span> — smooth transitions &nbsp;•</span>
+        </div>
+    </div>
+
+
+    <div class="chai-grid chai-grid-cols-4" style="border-bottom:1px solid rgba(200,134,60,0.18);">
+        <div class="chai-text-center" style="padding:2.5rem 1rem;border-right:1px solid rgba(200,134,60,0.18);">
+            <div class="chai-font-black"
+                style="font-family:'Syne',sans-serif;font-size:2.8rem;color:#f0e8d8;line-height:1;">300+</div>
+            <div class="chai-font-mono chai-uppercase"
+                style="font-size:0.68rem;letter-spacing:0.15em;color:#4a3f2c;margin-top:0.4rem;">Utility Classes</div>
+        </div>
+        <div class="chai-text-center" style="padding:2.5rem 1rem;border-right:1px solid rgba(200,134,60,0.18);">
+            <div class="chai-font-black"
+                style="font-family:'Syne',sans-serif;font-size:2.8rem;color:#f0e8d8;line-height:1;">fast</div>
+            <div class="chai-font-mono chai-uppercase"
+                style="font-size:0.68rem;letter-spacing:0.15em;color:#4a3f2c;margin-top:0.4rem;">Setup</div>
+        </div>
+        <div class="chai-text-center" style="padding:2.5rem 1rem;border-right:1px solid rgba(200,134,60,0.18);">
+            <div class="chai-font-black"
+                style="font-family:'Syne',sans-serif;font-size:2.8rem;color:#f0e8d8;line-height:1;">18</div>
+            <div class="chai-font-mono chai-uppercase"
+                style="font-size:0.68rem;letter-spacing:0.15em;color:#4a3f2c;margin-top:0.4rem;">Categories</div>
+        </div>
+        <div class="chai-text-center" style="padding:2.5rem 1rem;">
+            <div class="chai-font-black"
+                style="font-family:'Syne',sans-serif;font-size:2.8rem;color:#f0e8d8;line-height:1;">easy</div>
+            <div class="chai-font-mono chai-uppercase"
+                style="font-size:0.68rem;letter-spacing:0.15em;color:#4a3f2c;margin-top:0.4rem;">Maintenance</div>
+        </div>
+    </div>
+
+
+    <section id="#install"
+        style="padding:6rem 0;border-bottom:1px solid rgba(200,134,60,0.18);background:linear-gradient(180deg,rgba(200,134,60,0.03) 0%,transparent 100%);">
+        <div style="max-width:1100px;margin:0 auto;padding:0 2rem;">
+            <span class="chai-font-mono chai-uppercase"
+                style="font-size:0.68rem;letter-spacing:0.2em;color:#9a5f1e;">Get Started</span>
+            <h2 class="chai-font-black"
+                style="font-family:'Syne',sans-serif;font-size:clamp(2rem,4vw,3rem);line-height:1.1;color:#f0e8d8;margin:0.6rem 0 1rem;">
+                One command. Ready to brew.</h2>
+            <p style="color:#5a4a30;line-height:1.75;max-width:560px;margin-bottom:2.5rem;">
+                Install AnkChaiCSS via npm, then drop one script tag and every
+                <code class="chai-font-mono" style="color:#c8863c;">chai-</code> utility class is live — no build step,
+                no config.
+            </p>
+
+            <div class="chai-flex chai-flex-col" style="gap:0;max-width:780px;">
+
+
+                <div class="chai-flex chai-items-start" style="gap:2rem;">
+                    <div class="chai-font-mono chai-flex chai-items-center chai-justify-center chai-flex-none"
+                        style="font-size:0.65rem;font-weight:500;letter-spacing:0.1em;color:#9a5f1e;background:rgba(200,134,60,0.08);border:1px solid rgba(200,134,60,0.18);border-radius:50%;width:2.8rem;height:2.8rem;margin-top:0.15rem;">
+                        01</div>
+                    <div class="chai-flex-1" style="padding-bottom:0.5rem;">
+                        <p class="chai-font-bold"
+                            style="font-family:'Syne',sans-serif;font-size:1.05rem;color:#e8d5b0;margin-bottom:0.3rem;">
+                            Install via npm</p>
+                        <p style="font-size:0.82rem;color:#5a4a30;margin-bottom:0.85rem;line-height:1.6;">Run this in
+                            your project terminal:</p>
+                        <div class="chai-relative chai-overflow-x-auto" id="cmd-install"
+                            style="background:#0e0c09;border:1px solid rgba(200,134,60,0.18);border-radius:10px;padding:1rem 1.2rem;">
+                            <span class="chai-block chai-font-mono chai-whitespace-pre"
+                                style="font-size:0.8rem;line-height:1.8;color:#8a7a60;"><span
+                                    style="color:#9a5f1e;margin-right:0.6rem;user-select:none;">$</span> npm i ankchaicss</span>
+                           
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="chai-flex chai-items-center" style="padding-left:1.35rem;height:2rem;">
+                    <div style="width:2px;height:100%;background:rgba(200,134,60,0.18);min-height:2rem;"></div>
+                </div>
+
+
+                <div class="chai-flex chai-items-start" style="gap:2rem;">
+                    <div class="chai-font-mono chai-flex chai-items-center chai-justify-center chai-flex-none"
+                        style="font-size:0.65rem;font-weight:500;letter-spacing:0.1em;color:#9a5f1e;background:rgba(200,134,60,0.08);border:1px solid rgba(200,134,60,0.18);border-radius:50%;width:2.8rem;height:2.8rem;margin-top:0.15rem;">
+                        02</div>
+                    <div class="chai-flex-1" style="padding-bottom:0.5rem;">
+                        <p class="chai-font-bold"
+                            style="font-family:'Syne',sans-serif;font-size:1.05rem;color:#e8d5b0;margin-bottom:0.3rem;">
+                            Add the script tag</p>
+                        <p style="font-size:0.82rem;color:#5a4a30;margin-bottom:0.85rem;line-height:1.6;">Paste this at
+                            the bottom of your HTML, just before <code class="chai-font-mono"
+                                style="color:#c8863c;">&lt;/body&gt;</code>:</p>
+                        <div class="chai-relative chai-overflow-x-auto" id="cmd-script"
+                            style="background:#0e0c09;border:1px solid rgba(200,134,60,0.18);border-radius:10px;padding:1rem 1.2rem;">
+                            <span class="chai-block chai-font-mono chai-whitespace-pre"
+                                style="font-size:0.8rem;line-height:1.8;color:#8a7a60;"><span
+                                    style="color:#c8863c;">&lt;script</span> <span
+                                    style="color:#7ab8a6;">src</span><span style="color:#5a4a30;">=</span><span
+                                    style="color:#7a9a60;">"node_modules/ankchaicss/src/script.js"</span><span
+                                    style="color:#c8863c;">&gt;&lt;/script&gt;</span></span>
+                          
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="chai-flex chai-items-center" style="padding-left:1.35rem;height:2rem;">
+                    <div style="width:2px;height:100%;background:rgba(200,134,60,0.18);min-height:2rem;"></div>
+                </div>
+
+
+                <div class="chai-flex chai-items-start" style="gap:2rem;">
+                    <div class="chai-font-mono chai-flex chai-items-center chai-justify-center chai-flex-none"
+                        style="font-size:0.65rem;font-weight:500;letter-spacing:0.1em;color:#9a5f1e;background:rgba(200,134,60,0.08);border:1px solid rgba(200,134,60,0.18);border-radius:50%;width:2.8rem;height:2.8rem;margin-top:0.15rem;">
+                        03</div>
+                    <div class="chai-flex-1" style="padding-bottom:0.5rem;">
+                        <p class="chai-font-bold"
+                            style="font-family:'Syne',sans-serif;font-size:1.05rem;color:#e8d5b0;margin-bottom:0.3rem;">
+                            Start using chai- classes</p>
+                        <p style="font-size:0.82rem;color:#5a4a30;margin-bottom:0.85rem;line-height:1.6;">That's it — no
+                            config, no build. Just write:</p>
+                        <div class="chai-relative chai-overflow-x-auto" id="cmd-usage"
+                            style="background:#0e0c09;border:1px solid rgba(200,134,60,0.18);border-radius:10px;padding:1rem 1.2rem;">
+                            <span class="chai-block chai-font-mono chai-whitespace-pre"
+                                style="font-size:0.8rem;line-height:1.8;color:#8a7a60;"><span
+                                    style="color:#c8863c;">&lt;div</span> <span style="color:#7ab8a6;">class</span><span
+                                    style="color:#5a4a30;">=</span><span style="color:#7a9a60;">"chai-flex chai-p-4 chai-rounded-lg chai-bg-teal"</span><span style="color:#c8863c;">&gt;</span></span>
+                            <span class="chai-block chai-font-mono chai-whitespace-pre"
+                                style="font-size:0.8rem;line-height:1.8;color:#8a7a60;padding-left:1.2rem;"><span
+                                    style="color:#c8863c;">&lt;p</span> <span style="color:#7ab8a6;">class</span><span
+                                    style="color:#5a4a30;">=</span><span style="color:#7a9a60;">"chai-text-xl chai-font-bold chai-text-white"</span><span style="color:#c8863c;">&gt;</span>Hello,Chai!<span style="color:#c8863c;">&lt;/p&gt;</span></span>
+                            <span class="chai-block chai-font-mono chai-whitespace-pre"
+                                style="font-size:0.8rem;line-height:1.8;color:#8a7a60;"><span
+                                    style="color:#c8863c;">&lt;/div&gt;</span></span>
+                          
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <section id="reference" style="padding:6rem 0;border-bottom:1px solid rgba(200,134,60,0.18);">
+        <div style="max-width:1100px;margin:0 auto;padding:0 2rem;">
+            <span class="chai-font-mono chai-uppercase"
+                style="font-size:0.68rem;letter-spacing:0.2em;color:#9a5f1e;">Class Reference</span>
+            <h2 class="chai-font-black"
+                style="font-family:'Syne',sans-serif;font-size:clamp(2rem,4vw,3rem);line-height:1.1;color:#f0e8d8;margin:0.6rem 0 1rem;">
+                Every class, one place.</h2>
+            <p style="color:#5a4a30;line-height:1.75;max-width:560px;margin-bottom:2rem;">Browse the full list of
+                AnkChaiCSS utilities grouped by category.</p>
+
+
+            <style>
+                .chai-tab-radio {
+                    display: none;
+                }
+
+                .chai-ref-tab {
+                    padding: 0.65rem 1.4rem;
+                    font-family: 'DM Mono', monospace;
+                    font-size: 0.72rem;
+                    letter-spacing: 0.08em;
+                    text-transform: uppercase;
+                    color: #4a3f2c;
+                    cursor: pointer;
+                    transition: background 0.15s, color 0.15s;
+                    border-right: 1px solid rgba(200, 134, 60, 0.18);
+                }
+
+                .chai-ref-tab:last-child {
+                    border-right: none;
+                }
+
+                .chai-ref-tab:hover {
+                    background: rgba(200, 134, 60, 0.06);
+                    color: #e8b87a;
+                }
+
+                #t-typo:checked~.ref-tabs label[for="t-typo"],
+                #t-colors:checked~.ref-tabs label[for="t-colors"],
+                #t-spacing:checked~.ref-tabs label[for="t-spacing"],
+                #t-layout:checked~.ref-tabs label[for="t-layout"],
+                #t-borders:checked~.ref-tabs label[for="t-borders"],
+                #t-effects:checked~.ref-tabs label[for="t-effects"] {
+                    background: #c8863c;
+                    color: #0a0906;
+                }
+
+                .chai-tab-panel {
+                    display: none;
+                }
+
+                #t-typo:checked~.tab-panels #p-typo,
+                #t-colors:checked~.tab-panels #p-colors,
+                #t-spacing:checked~.tab-panels #p-spacing,
+                #t-layout:checked~.tab-panels #p-layout,
+                #t-borders:checked~.tab-panels #p-borders,
+                #t-effects:checked~.tab-panels #p-effects {
+                    display: block;
+                }
+
+                .ref-tr:hover td {
+                    background: rgba(200, 134, 60, 0.04);
+                }
+
+                @keyframes fadeUp {
+                    from {
+                        opacity: 0;
+                        transform: translateY(24px)
+                    }
+
+                    to {
+                        opacity: 1;
+                        transform: translateY(0)
+                    }
+                }
+
+                @keyframes ticker {
+                    from {
+                        transform: translateX(0)
+                    }
+
+                    to {
+                        transform: translateX(-50%)
+                    }
+                }
+
+                html {
+                    scroll-behavior: smooth;
+                }
+
+                *,
+                *::before,
+                *::after {
+                    box-sizing: border-box;
+                    margin: 0;
+                    padding: 0;
+                }
+
+                body {
+                    overflow-x: hidden;
+                }
+
+                a {
+                    text-decoration: none;
+                    color: inherit;
+                }
+            </style>
+
+            <input class="chai-tab-radio" type="radio" name="ref-tab" id="t-typo" checked />
+            <input class="chai-tab-radio" type="radio" name="ref-tab" id="t-colors" />
+            <input class="chai-tab-radio" type="radio" name="ref-tab" id="t-spacing" />
+            <input class="chai-tab-radio" type="radio" name="ref-tab" id="t-layout" />
+            <input class="chai-tab-radio" type="radio" name="ref-tab" id="t-borders" />
+            <input class="chai-tab-radio" type="radio" name="ref-tab" id="t-effects" />
+
+            <div class="ref-tabs chai-flex"
+                style="border:1px solid rgba(200,134,60,0.18);border-radius:10px;overflow:hidden;margin-bottom:2rem;width:fit-content;">
+                <label class="chai-ref-tab" for="t-typo">Typography</label>
+                <label class="chai-ref-tab" for="t-colors">Colors</label>
+                <label class="chai-ref-tab" for="t-spacing">Spacing</label>
+                <label class="chai-ref-tab" for="t-layout">Layout</label>
+                <label class="chai-ref-tab" for="t-borders">Borders</label>
+                <label class="chai-ref-tab" for="t-effects">Effects</label>
+            </div>
+
+            <div class="tab-panels chai-relative">
+
+                
+                <div class="chai-tab-panel" id="p-typo">
+                    <table class="chai-w-full chai-font-mono" style="border-collapse:collapse;font-size:0.78rem;">
+                        <tr>
+                            <th
+                                style="text-align:left;padding:0.7rem 1rem;color:#3a3020;font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;border-bottom:1px solid rgba(200,134,60,0.18);">
+                                Class</th>
+                            <th
+                                style="text-align:left;padding:0.7rem 1rem;color:#3a3020;font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;border-bottom:1px solid rgba(200,134,60,0.18);">
+                                Property</th>
+                            <th
+                                style="text-align:left;padding:0.7rem 1rem;color:#3a3020;font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;border-bottom:1px solid rgba(200,134,60,0.18);">
+                                Value</th>
+                        </tr>
+                        <tr class="ref-tr">
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#c8863c;">.chai-text-xs</span>
+                            </td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                font-size</td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#7a8a60;">0.75rem</span>
+                            </td>
+                        </tr>
+                        <tr class="ref-tr">
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#c8863c;">.chai-text-sm</span>
+                            </td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                font-size</td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#7a8a60;">0.875rem</span>
+                            </td>
+                        </tr>
+                        <tr class="ref-tr">
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#c8863c;">.chai-text-base</span>
+                            </td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                font-size</td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#7a8a60;">1rem</span>
+                            </td>
+                        </tr>
+                        <tr class="ref-tr">
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#c8863c;">.chai-text-lg</span>
+                            </td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                font-size</td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#7a8a60;">1.125rem</span>
+                            </td>
+                        </tr>
+                        <tr class="ref-tr">
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#c8863c;">.chai-text-xl</span>
+                            </td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                font-size</td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#7a8a60;">1.25rem</span>
+                            </td>
+                        </tr>
+                        <tr class="ref-tr">
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#c8863c;">.chai-text-2xl</span>
+                            </td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                font-size</td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#7a8a60;">1.5rem</span>
+                            </td>
+                        </tr>
+                        <tr class="ref-tr">
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#c8863c;">.chai-text-3xl</span>
+                            </td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                font-size</td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#7a8a60;">1.875rem</span>
+                            </td>
+                        </tr>
+                        <tr class="ref-tr">
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#c8863c;">.chai-text-4xl</span>
+                            </td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                font-size</td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#7a8a60;">2.25rem</span>
+                            </td>
+                        </tr>
+                        <tr class="ref-tr">
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#c8863c;">.chai-text-5xl</span>
+                            </td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                font-size</td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#7a8a60;">3rem</span>
+                            </td>
+                        </tr>
+                        <tr class="ref-tr">
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#c8863c;">.chai-font-thin</span>
+                            </td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                font-weight</td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#7a8a60;">100</span>
+                            </td>
+                        </tr>
+                        <tr class="ref-tr">
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#c8863c;">.chai-font-light</span>
+                            </td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                font-weight</td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#7a8a60;">300</span>
+                            </td>
+                        </tr>
+                        <tr class="ref-tr">
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#c8863c;">.chai-font-normal</span>
+                            </td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                font-weight</td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#7a8a60;">400</span>
+                            </td>
+                        </tr>
+                        <tr class="ref-tr">
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#c8863c;">.chai-font-medium</span>
+                            </td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                font-weight</td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#7a8a60;">500</span>
+                            </td>
+                        </tr>
+                        <tr class="ref-tr">
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#c8863c;">.chai-font-semibold</span>
+                            </td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                font-weight</td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#7a8a60;">600</span>
+                            </td>
+                        </tr>
+                        <tr class="ref-tr">
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#c8863c;">.chai-font-bold</span>
+                            </td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                font-weight</td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#7a8a60;">700</span>
+                            </td>
+                        </tr>
+                        <tr class="ref-tr">
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#c8863c;">.chai-font-black</span>
+                            </td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                font-weight</td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#7a8a60;">900</span>
+                            </td>
+                        </tr>
+                        <tr class="ref-tr">
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#c8863c;">.chai-italic</span>
+                            </td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                font-style</td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#7a8a60;">italic</span>
+                            </td>
+                        </tr>
+                        <tr class="ref-tr">
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#c8863c;">.chai-font-sans</span>
+                            </td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                font-family</td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#7a8a60;">ui-sans-serif…</span>
+                            </td>
+                        </tr>
+                        <tr class="ref-tr">
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#c8863c;">.chai-font-serif</span>
+                            </td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                font-family</td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#7a8a60;">ui-serif, Georgia…</span>
+                            </td>
+                        </tr>
+                        <tr class="ref-tr">
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#c8863c;">.chai-font-mono</span>
+                            </td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                font-family</td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#7a8a60;">ui-monospace…</span>
+                            </td>
+                        </tr>
+                        <tr class="ref-tr">
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#c8863c;">.chai-text-left</span>
+                            </td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                text-align</td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#7a8a60;">left</span>
+                            </td>
+                        </tr>
+                        <tr class="ref-tr">
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#c8863c;">.chai-text-center</span>
+                            </td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                text-align</td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#7a8a60;">center</span>
+                            </td>
+                        </tr>
+                        <tr class="ref-tr">
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#c8863c;">.chai-text-right</span>
+                            </td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                text-align</td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#7a8a60;">right</span>
+                            </td>
+                        </tr>
+                        <tr class="ref-tr">
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#c8863c;">.chai-uppercase</span>
+                            </td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                text-transform</td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#7a8a60;">uppercase</span>
+                            </td>
+                        </tr>
+                        <tr class="ref-tr">
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#c8863c;">.chai-lowercase</span>
+                            </td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                text-transform</td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#7a8a60;">lowercase</span>
+                            </td>
+                        </tr>
+                        <tr class="ref-tr">
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#c8863c;">.chai-capitalize</span>
+                            </td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                text-transform</td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#7a8a60;">capitalize</span>
+                            </td>
+                        </tr>
+                        <tr class="ref-tr">
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#c8863c;">.chai-underline</span>
+                            </td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                text-decoration</td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#7a8a60;">underline</span>
+                            </td>
+                        </tr>
+                        <tr class="ref-tr">
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#c8863c;">.chai-leading-none</span>
+                            </td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                line-height</td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#7a8a60;">1</span>
+                            </td>
+                        </tr>
+                        <tr class="ref-tr">
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#c8863c;">.chai-leading-tight</span>
+                            </td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                line-height</td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#7a8a60;">1.25</span>
+                            </td>
+                        </tr>
+                        <tr class="ref-tr">
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#c8863c;">.chai-leading-normal</span>
+                            </td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                line-height</td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#7a8a60;">1.5</span>
+                            </td>
+                        </tr>
+                        <tr class="ref-tr">
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#c8863c;">.chai-leading-relaxed</span>
+                            </td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                line-height</td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#7a8a60;">1.625</span>
+                            </td>
+                        </tr>
+                        <tr class="ref-tr">
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#c8863c;">.chai-leading-loose</span>
+                            </td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                line-height</td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#7a8a60;">2</span>
+                            </td>
+                        </tr>
+                        <tr class="ref-tr">
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#c8863c;">.chai-tracking-tight</span>
+                            </td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                letter-spacing</td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#7a8a60;">-0.025em</span>
+                            </td>
+                        </tr>
+                        <tr class="ref-tr">
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#c8863c;">.chai-tracking-wide</span>
+                            </td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                letter-spacing</td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#7a8a60;">0.025em</span>
+                            </td>
+                        </tr>
+                        <tr class="ref-tr">
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#c8863c;">.chai-tracking-widest</span>
+                            </td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                letter-spacing</td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#7a8a60;">0.1em</span>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <!-- COLORS -->
+                <div class="chai-tab-panel" id="p-colors">
+                    <table class="chai-w-full chai-font-mono" style="border-collapse:collapse;font-size:0.78rem;">
+                        <tr>
+                            <th
+                                style="text-align:left;padding:0.7rem 1rem;color:#3a3020;font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;border-bottom:1px solid rgba(200,134,60,0.18);">
+                                Class</th>
+                            <th
+                                style="text-align:left;padding:0.7rem 1rem;color:#3a3020;font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;border-bottom:1px solid rgba(200,134,60,0.18);">
+                                Property</th>
+                            <th
+                                style="text-align:left;padding:0.7rem 1rem;color:#3a3020;font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;border-bottom:1px solid rgba(200,134,60,0.18);">
+                                Value</th>
+                        </tr>
+                        <tr class="ref-tr">
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#c8863c;">.chai-text-white</span>
+                            </td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                color</td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#7a8a60;">#ffffff</span>
+                            </td>
+                        </tr>
+                        <tr class="ref-tr">
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#c8863c;">.chai-text-black</span>
+                            </td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                color</td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#7a8a60;">#000000</span>
+                            </td>
+                        </tr>
+                        <tr class="ref-tr">
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#c8863c;">.chai-text-red</span>
+                            </td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                color</td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#7a8a60;">#ef4444</span>
+                            </td>
+                        </tr>
+                        <tr class="ref-tr">
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#c8863c;">.chai-text-orange</span>
+                            </td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                color</td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#7a8a60;">#f97316</span>
+                            </td>
+                        </tr>
+                        <tr class="ref-tr">
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#c8863c;">.chai-text-yellow</span>
+                            </td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                color</td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#7a8a60;">#eab308</span>
+                            </td>
+                        </tr>
+                        <tr class="ref-tr">
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#c8863c;">.chai-text-green</span>
+                            </td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                color</td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#7a8a60;">#22c55e</span>
+                            </td>
+                        </tr>
+                        <tr class="ref-tr">
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#c8863c;">.chai-text-teal</span>
+                            </td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                color</td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#7a8a60;">#14b8a6</span>
+                            </td>
+                        </tr>
+                        <tr class="ref-tr">
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#c8863c;">.chai-text-blue</span>
+                            </td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                color</td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#7a8a60;">#3b82f6</span>
+                            </td>
+                        </tr>
+                        <tr class="ref-tr">
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#c8863c;">.chai-text-indigo</span>
+                            </td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                color</td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#7a8a60;">#6366f1</span>
+                            </td>
+                        </tr>
+                        <tr class="ref-tr">
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#c8863c;">.chai-text-purple</span>
+                            </td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                color</td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#7a8a60;">#a855f7</span>
+                            </td>
+                        </tr>
+                        <tr class="ref-tr">
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#c8863c;">.chai-text-pink</span>
+                            </td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                color</td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#7a8a60;">#ec4899</span>
+                            </td>
+                        </tr>
+                        <tr class="ref-tr">
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#c8863c;">.chai-text-gray-100 … 900</span>
+                            </td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                color</td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#7a8a60;">#f3f4f6 … #111827</span>
+                            </td>
+                        </tr>
+                        <tr class="ref-tr">
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#c8863c;">.chai-bg-white</span>
+                            </td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                background-color</td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#7a8a60;">#ffffff</span>
+                            </td>
+                        </tr>
+                        <tr class="ref-tr">
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#c8863c;">.chai-bg-black</span>
+                            </td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                background-color</td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#7a8a60;">#000000</span>
+                            </td>
+                        </tr>
+                        <tr class="ref-tr">
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#c8863c;">.chai-bg-teal</span>
+                            </td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                background-color</td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#7a8a60;">#14b8a6</span>
+                            </td>
+                        </tr>
+                        <tr class="ref-tr">
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#c8863c;">.chai-bg-blue</span>
+                            </td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                background-color</td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#7a8a60;">#3b82f6</span>
+                            </td>
+                        </tr>
+                        <tr class="ref-tr">
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#c8863c;">.chai-bg-gray-100 … 900</span>
+                            </td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                background-color</td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#7a8a60;">#f3f4f6 … #111827</span>
+                            </td>
+                        </tr>
+                        <tr class="ref-tr">
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#c8863c;">.chai-bg-transparent</span>
+                            </td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                background-color</td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#7a8a60;">transparent</span>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <!-- SPACING -->
+                <div class="chai-tab-panel" id="p-spacing">
+                    <table class="chai-w-full chai-font-mono" style="border-collapse:collapse;font-size:0.78rem;">
+                        <tr>
+                            <th
+                                style="text-align:left;padding:0.7rem 1rem;color:#3a3020;font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;border-bottom:1px solid rgba(200,134,60,0.18);">
+                                Class</th>
+                            <th
+                                style="text-align:left;padding:0.7rem 1rem;color:#3a3020;font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;border-bottom:1px solid rgba(200,134,60,0.18);">
+                                Property</th>
+                            <th
+                                style="text-align:left;padding:0.7rem 1rem;color:#3a3020;font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;border-bottom:1px solid rgba(200,134,60,0.18);">
+                                Value</th>
+                        </tr>
+                        <tr class="ref-tr">
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#c8863c;">.chai-m-0/1/2/4/8</span>
+                            </td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                margin</td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#7a8a60;">0 – 2rem</span>
+                            </td>
+                        </tr>
+                        <tr class="ref-tr">
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#c8863c;">.chai-m-auto</span>
+                            </td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                margin</td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#7a8a60;">auto</span>
+                            </td>
+                        </tr>
+                        <tr class="ref-tr">
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#c8863c;">.chai-mx-auto</span>
+                            </td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                margin-left + right</td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#7a8a60;">auto</span>
+                            </td>
+                        </tr>
+                        <tr class="ref-tr">
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#c8863c;">.chai-p-0 … p-16</span>
+                            </td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                padding</td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#7a8a60;">0 – 4rem</span>
+                            </td>
+                        </tr>
+                        <tr class="ref-tr">
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#c8863c;">.chai-w-full</span>
+                            </td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                width</td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#7a8a60;">100%</span>
+                            </td>
+                        </tr>
+                        <tr class="ref-tr">
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#c8863c;">.chai-w-1/2</span>
+                            </td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                width</td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#7a8a60;">50%</span>
+                            </td>
+                        </tr>
+                        <tr class="ref-tr">
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#c8863c;">.chai-h-screen</span>
+                            </td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                height</td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#7a8a60;">100vh</span>
+                            </td>
+                        </tr>
+                        <tr class="ref-tr">
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#c8863c;">.chai-gap-0/1/2/4/6/8</span>
+                            </td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                gap</td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#7a8a60;">0 – 2rem</span>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <!-- LAYOUT -->
+                <div class="chai-tab-panel" id="p-layout">
+                    <table class="chai-w-full chai-font-mono" style="border-collapse:collapse;font-size:0.78rem;">
+                        <tr>
+                            <th
+                                style="text-align:left;padding:0.7rem 1rem;color:#3a3020;font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;border-bottom:1px solid rgba(200,134,60,0.18);">
+                                Class</th>
+                            <th
+                                style="text-align:left;padding:0.7rem 1rem;color:#3a3020;font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;border-bottom:1px solid rgba(200,134,60,0.18);">
+                                Property</th>
+                            <th
+                                style="text-align:left;padding:0.7rem 1rem;color:#3a3020;font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;border-bottom:1px solid rgba(200,134,60,0.18);">
+                                Value</th>
+                        </tr>
+                        <tr class="ref-tr">
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#c8863c;">.chai-flex</span>
+                            </td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                display</td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#7a8a60;">flex</span>
+                            </td>
+                        </tr>
+                        <tr class="ref-tr">
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#c8863c;">.chai-grid</span>
+                            </td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                display</td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#7a8a60;">grid</span>
+                            </td>
+                        </tr>
+                        <tr class="ref-tr">
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#c8863c;">.chai-hidden</span>
+                            </td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                display</td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#7a8a60;">none</span>
+                            </td>
+                        </tr>
+                        <tr class="ref-tr">
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#c8863c;">.chai-flex-col</span>
+                            </td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                flex-direction</td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#7a8a60;">column</span>
+                            </td>
+                        </tr>
+                        <tr class="ref-tr">
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#c8863c;">.chai-justify-between</span>
+                            </td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                justify-content</td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#7a8a60;">space-between</span>
+                            </td>
+                        </tr>
+                        <tr class="ref-tr">
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#c8863c;">.chai-items-center</span>
+                            </td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                align-items</td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#7a8a60;">center</span>
+                            </td>
+                        </tr>
+                        <tr class="ref-tr">
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#c8863c;">.chai-grid-cols-1 … 4</span>
+                            </td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                grid-template-columns</td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#7a8a60;">repeat(N,…)</span>
+                            </td>
+                        </tr>
+                        <tr class="ref-tr">
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#c8863c;">.chai-relative / .chai-absolute</span>
+                            </td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                position</td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#7a8a60;">relative / absolute</span>
+                            </td>
+                        </tr>
+                        <tr class="ref-tr">
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#c8863c;">.chai-overflow-hidden</span>
+                            </td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                overflow</td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#7a8a60;">hidden</span>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <!-- BORDERS -->
+                <div class="chai-tab-panel" id="p-borders">
+                    <table class="chai-w-full chai-font-mono" style="border-collapse:collapse;font-size:0.78rem;">
+                        <tr>
+                            <th
+                                style="text-align:left;padding:0.7rem 1rem;color:#3a3020;font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;border-bottom:1px solid rgba(200,134,60,0.18);">
+                                Class</th>
+                            <th
+                                style="text-align:left;padding:0.7rem 1rem;color:#3a3020;font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;border-bottom:1px solid rgba(200,134,60,0.18);">
+                                Property</th>
+                            <th
+                                style="text-align:left;padding:0.7rem 1rem;color:#3a3020;font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;border-bottom:1px solid rgba(200,134,60,0.18);">
+                                Value</th>
+                        </tr>
+                        <tr class="ref-tr">
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#c8863c;">.chai-border</span>
+                            </td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                border-width</td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#7a8a60;">1px</span>
+                            </td>
+                        </tr>
+                        <tr class="ref-tr">
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#c8863c;">.chai-border-2</span>
+                            </td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                border-width</td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#7a8a60;">2px</span>
+                            </td>
+                        </tr>
+                        <tr class="ref-tr">
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#c8863c;">.chai-border-solid</span>
+                            </td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                border-style</td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#7a8a60;">solid</span>
+                            </td>
+                        </tr>
+                        <tr class="ref-tr">
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#c8863c;">.chai-border-dashed</span>
+                            </td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                border-style</td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#7a8a60;">dashed</span>
+                            </td>
+                        </tr>
+                        <tr class="ref-tr">
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#c8863c;">.chai-rounded-none</span>
+                            </td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                border-radius</td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#7a8a60;">0rem</span>
+                            </td>
+                        </tr>
+                        <tr class="ref-tr">
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#c8863c;">.chai-rounded-lg</span>
+                            </td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                border-radius</td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#7a8a60;">0.5rem</span>
+                            </td>
+                        </tr>
+                        <tr class="ref-tr">
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#c8863c;">.chai-rounded-full</span>
+                            </td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                border-radius</td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#7a8a60;">9999px</span>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <!-- EFFECTS -->
+                <div class="chai-tab-panel" id="p-effects">
+                    <table class="chai-w-full chai-font-mono" style="border-collapse:collapse;font-size:0.78rem;">
+                        <tr>
+                            <th
+                                style="text-align:left;padding:0.7rem 1rem;color:#3a3020;font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;border-bottom:1px solid rgba(200,134,60,0.18);">
+                                Class</th>
+                            <th
+                                style="text-align:left;padding:0.7rem 1rem;color:#3a3020;font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;border-bottom:1px solid rgba(200,134,60,0.18);">
+                                Property</th>
+                            <th
+                                style="text-align:left;padding:0.7rem 1rem;color:#3a3020;font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;border-bottom:1px solid rgba(200,134,60,0.18);">
+                                Value</th>
+                        </tr>
+                        <tr class="ref-tr">
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#c8863c;">.chai-shadow-sm</span>
+                            </td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                box-shadow</td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#7a8a60;">0 1px 2px …</span>
+                            </td>
+                        </tr>
+                        <tr class="ref-tr">
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#c8863c;">.chai-shadow-lg</span>
+                            </td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                box-shadow</td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#7a8a60;">0 10px 15px …</span>
+                            </td>
+                        </tr>
+                        <tr class="ref-tr">
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#c8863c;">.chai-opacity-50</span>
+                            </td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                opacity</td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#7a8a60;">0.5</span>
+                            </td>
+                        </tr>
+                        <tr class="ref-tr">
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#c8863c;">.chai-transition</span>
+                            </td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                transition-property</td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#7a8a60;">color, bg, …</span>
+                            </td>
+                        </tr>
+                        <tr class="ref-tr">
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#c8863c;">.chai-duration-300</span>
+                            </td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                transition-duration</td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#7a8a60;">300ms</span>
+                            </td>
+                        </tr>
+                        <tr class="ref-tr">
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#c8863c;">.chai-scale-105</span>
+                            </td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                transform</td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#7a8a60;">scale(1.05)</span>
+                            </td>
+                        </tr>
+                        <tr class="ref-tr">
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#c8863c;">.chai-cursor-pointer</span>
+                            </td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                cursor</td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#7a8a60;">pointer</span>
+                            </td>
+                        </tr>
+                        <tr class="ref-tr">
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#c8863c;">.chai-select-none</span>
+                            </td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                user-select</td>
+                            <td
+                                style="padding:0.65rem 1rem;border-bottom:1px solid rgba(200,134,60,0.07);color:#5a4a30;">
+                                <span style="color:#7a8a60;">none</span>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="chai-text-center" style="padding:4rem 2rem;">
+        <div
+            style="font-family:'Syne',sans-serif;font-weight:800;font-size:1.8rem;color:#2a2015;letter-spacing:-0.04em;">
+            Ank<span style="color:#3a2f1a;">Chai</span>CSS
+        </div>
+        <p
+            style="font-family:'Fraunces',serif;font-style:italic;font-weight:300;color:#2a2015;margin-top:0.5rem;font-size:0.9rem;">
+            Brew beautiful interfaces · One utility class at a time</p>
+        <p class="chai-font-mono chai-uppercase"
+            style="margin-top:1.5rem;font-size:0.65rem;color:#2a2015;letter-spacing:0.1em;">
+            Made with ☕ by Ank · Pure JS · Zero Build Step · chai- prefixed
+        </p>
+    </footer>
+
+    <script src="node_modules/ankchaicss/src/script.js"></script>
+
+
+</body>
+
+</html>
